@@ -13,6 +13,9 @@ const App = () => {
         <h1>Monk & Smuggler</h1>
         <h2>Coffee | Books | Culture</h2>
       </div>
+      <div className="textContainer">
+        <h3>Coming Soon...</h3>
+      </div>
     </div>
   );
 };

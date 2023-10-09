@@ -6,7 +6,7 @@
 
 .logoContainer {
   position: relative;
-  width: 65%;
+  width: 55%;
 }
 
 .logoOverlay {
@@ -20,4 +20,13 @@
 .metaContainer {
   position: absolute;
   top: 10%;
+}
+
+.textContainer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.textContainer h3 {
+  font-weight: 200;
 }
