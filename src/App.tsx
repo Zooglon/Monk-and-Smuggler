@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./images/MonkandSmugglerLogoOnBlack.svg";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="pageContainer">
+      <div className="logoOverlay"></div>
+      <div className="logoContainer">
+        <img src={logo} className="site-logo" alt="Monk & Smuggler logo" />
+      </div>
+      <div className="metaContainer">
+        <h1>Monk & Smuggler</h1>
+        <h2>Coffee | Books | Culture</h2>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
