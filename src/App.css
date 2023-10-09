@@ -20,6 +20,15 @@
 .metaContainer {
   position: absolute;
   top: 10%;
+  opacity: 0;
+}
+
+.metaContainer h1 {
+  opacity: 0;
+}
+
+.metaContainer h2 {
+  opacity: 0;
 }
 
 .textContainer {
@@ -29,4 +38,15 @@
 
 .textContainer h3 {
   font-weight: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .pageContainer {
+    justify-content: center;
+    height: 80vh;
+  }
+
+  .logoContainer {
+    width: calc(100% - 10px);
+  }
 }
