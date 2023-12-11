@@ -14,7 +14,7 @@ const App = () => {
         <h2>Coffee | Books | Culture</h2>
       </div>
       <div className="textContainer">
-        <h3>Coming Soon...</h3>
+        <h3>Something is brewing...</h3>
       </div>
     </div>
   );
