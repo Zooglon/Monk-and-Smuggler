@@ -1,3 +1,1 @@
-export const Footer = () => {
-  <p>I am a footer</p>;
-};
+export const Footer = () => <p>I am a footer</p>;
