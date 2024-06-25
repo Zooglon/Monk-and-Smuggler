@@ -1,3 +1,3 @@
 export const StorySoFar = () => {
-  <p>The story so far...</p>;
+  return <p>The story so far...</p>;
 };

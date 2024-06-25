@@ -1,3 +1,3 @@
 export const OpeningTimes = () => {
-  <p>Opening Times</p>;
+  return <p>Opening Times</p>;
 };
