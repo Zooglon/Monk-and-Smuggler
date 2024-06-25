@@ -21,25 +21,25 @@ export const Nav = () => {
           </div>
           <ul className="ms_nav--container">
             <li className="ms_nav--menu-item">
-              <a href="#os_main" onClick={() => setShowNav(false)}>
+              <a href="/" onClick={() => setShowNav(false)}>
                 <span className="ms_nav--bean"></span>
                 <p>MONK & SMUGGLER</p>
               </a>
             </li>
             <li className="ms_nav--menu-item">
-              <a href="#os_openinghours" onClick={() => setShowNav(false)}>
+              <a href="/openinghours" onClick={() => setShowNav(false)}>
                 <span className="ms_nav--bean"></span>
                 <p>OPENING HOURS</p>
               </a>
             </li>
             <li className="ms_nav--menu-item">
-              <a href="#os_story" onClick={() => setShowNav(false)}>
+              <a href="/our-story" onClick={() => setShowNav(false)}>
                 <span className="ms_nav--bean"></span>
                 <p>OUR STORY</p>
               </a>
             </li>
             <li className="ms_nav--menu-item">
-              <a href="#os_contact">
+              <a href="/contact">
                 <span className="ms_nav--bean"></span>
                 <p>GET IN TOUCH</p>
               </a>
@@ -49,7 +49,8 @@ export const Nav = () => {
       ) : (
         <button
           onClick={() => setShowNav(true)}
-          className="ms_nav--Btn ms_Btn flex col gap-s closedNav">
+          className="ms_nav--Btn ms_Btn flex col gap-s closedNav"
+          style={{ position: "absolute" }}>
           <span></span>
           <span></span>
           <span></span>
