@@ -1,3 +1,11 @@
+/* Colour Palette */
+:root {
+  --green: #34433c;
+  --cream: #d8c8b7;
+  --orange: #ad4f2b;
+  --white: #ffffff;
+}
+
 button {
   background-color: unset;
   border: unset;
@@ -20,6 +28,10 @@ button {
   justify-content: center;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .start {
   justify-content: start;
 }
@@ -32,7 +44,8 @@ button {
   justify-content: space-between;
 }
 
-.gap {
+.gap,
+.gap-m {
   gap: 1rem;
 }
 
@@ -57,7 +70,15 @@ button {
 }
 
 .p-4 {
-  padding: 3rem;
+  padding: 4rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .pageContainer {
@@ -195,9 +216,9 @@ button {
   left: 30%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .ms_Btn {
-    background-color: red;
+    display: none;
   }
 }
 
@@ -216,6 +237,6 @@ button {
 
 .closedNav {
   z-index: 99;
-  left: 81.5vw;
-  margin: 3rem;
+  right: 3rem;
+  top: 3rem;
 }
