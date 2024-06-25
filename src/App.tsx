@@ -12,7 +12,7 @@ const App = () => {
         <div className="logoContainer">
           <img src={logo} className="site-logo" alt="Monk & Smuggler logo" />
         </div>
-        <div className="metaContainer">
+        <div id="os_main" className="metaContainer">
           <h1>Monk & Smuggler</h1>
           <h2>Coffee | Books | Culture</h2>
         </div>
