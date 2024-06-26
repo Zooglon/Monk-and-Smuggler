@@ -4,25 +4,28 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import ErrorPage from "./errorPage";
-import { OpeningTimes, StorySoFar, Contact } from "./components/sections";
+import { OpeningTimes, Manifesto, Contact } from "./components/sections";
+
+const size =
+  window.screen.height > window.screen.width ? window.screen.height : window.screen.width;
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: size >= 768 ? <App page="home" /> : <App />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/openinghours",
-    element: <OpeningTimes />,
+    element: size >= 768 ? <App page="openingHours" /> : <OpeningTimes />,
   },
   {
-    path: "/our-story",
-    element: <StorySoFar />,
+    path: "/manifesto",
+    element: size >= 768 ? <App page="about" /> : <Manifesto />,
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: size >= 768 ? <App page="contact" /> : <Contact />,
   },
 ]);
 
