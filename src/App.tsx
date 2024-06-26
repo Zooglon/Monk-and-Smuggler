@@ -1,25 +1,31 @@
-import React from "react";
-import logo from "./images/MonkandSmugglerLogoOnBlack.svg";
 import "./App.css";
 import { Nav } from "./components";
+import { LandingPage } from "./components/sections";
 
-const App = () => {
+const RenderPage = ({ page }: { page?: string | undefined }) => {
+  switch (page) {
+    case "home":
+      return <LandingPage />;
+
+    case "openingHours":
+      return <p>Opening</p>;
+
+    case "about":
+      return <p>Story</p>;
+
+    case "contact":
+      return <p>Contact</p>;
+
+    default:
+      return <LandingPage />;
+  }
+};
+
+const App = ({ page }: { page?: string | undefined }) => {
   return (
-    <div className="siteContainer">
+    <div className="siteContainer flex col">
       <Nav />
-      <div className="pageContainer">
-        <div className="logoOverlay"></div>
-        <div className="logoContainer">
-          <img src={logo} className="site-logo" alt="Monk & Smuggler logo" />
-        </div>
-        <div id="os_main" className="metaContainer">
-          <h1>Monk & Smuggler</h1>
-          <h2>Coffee | Books | Culture</h2>
-        </div>
-        <div className="textContainer">
-          <h3>Something is brewing...</h3>
-        </div>
-      </div>
+      <RenderPage page={page} />
     </div>
   );
 };
