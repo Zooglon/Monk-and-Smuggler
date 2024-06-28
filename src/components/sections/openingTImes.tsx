@@ -1,3 +1,7 @@
 export const OpeningTimes = () => {
-  return <p>Opening Times</p>;
+  return (
+    <div className="tileContainer" style={{ backgroundColor: "var(--cream)" }}>
+      Opening Times
+    </div>
+  );
 };

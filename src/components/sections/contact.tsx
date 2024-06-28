@@ -1,3 +1,7 @@
 export const Contact = () => {
-  return <p>contact</p>;
+  return (
+    <div className="tileContainer" style={{ backgroundColor: "var(--brown)" }}>
+      contact
+    </div>
+  );
 };

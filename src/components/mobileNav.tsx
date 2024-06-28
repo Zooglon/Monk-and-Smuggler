@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Nav = () => {
+export const MobileNav = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ export const Nav = () => {
               </a>
             </li>
             <li className="ms_nav--menu-item">
-              <a href="/our-story" onClick={() => setShowNav(false)}>
+              <a href="/manifesto" onClick={() => setShowNav(false)}>
                 <span className="ms_nav--bean"></span>
                 <p>OUR STORY</p>
               </a>

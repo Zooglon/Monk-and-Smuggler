@@ -1,5 +1,5 @@
-import { Nav } from "./nav";
+import { MobileNav } from "./mobileNav";
 import { Footer } from "./footer";
 import Box from "./tools/box";
 
-export { Nav, Footer, Box };
+export { MobileNav, Footer, Box };

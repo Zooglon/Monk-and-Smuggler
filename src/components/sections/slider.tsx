@@ -1,5 +1,5 @@
-const SliderElement = () => {};
+import { ReactNode } from "react";
 
-export const Slider = () => {
-  <div className="sliderContainer"></div>;
-};
+export const Slider = ({ children }: { children: ReactNode }) => (
+  <div className="sliderContainer">{children}</div>
+);

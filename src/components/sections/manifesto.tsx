@@ -1,5 +1,9 @@
 export const Manifesto = () => {
-  return <p>The story so far...</p>;
+  return (
+    <div className="tileContainer" style={{ backgroundColor: "var(--orange)" }}>
+      Manifesto
+    </div>
+  );
 };
 
 // Our Manifesto -
