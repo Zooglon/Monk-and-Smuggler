@@ -1,9 +1,10 @@
 /* Colour Palette */
 :root {
-  --green: #34433c;
+  --green: #012920;
   --cream: #d8c8b7;
-  --orange: #ad4f2b;
+  --orange: #ba481b;
   --white: #ffffff;
+  --brown: #281c14;
 }
 
 button {
@@ -218,7 +219,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .ms_Btn {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -227,6 +228,7 @@ button {
   height: 6vh;
   width: 10vw;
   max-width: 3rem;
+  cursor: pointer;
 }
 
 .ms_nav--Btn > span {
@@ -239,4 +241,48 @@ button {
   z-index: 99;
   right: 3rem;
   top: 3rem;
+}
+
+.slider {
+  height: 100vh;
+  flex-grow: 1;
+}
+
+.expanded {
+  z-index: 9;
+  animation: expand 1s forwards ease-in;
+}
+
+@keyframes expand {
+  from {
+    flex-grow: 1;
+  }
+  to {
+    flex-grow: 10;
+  }
+}
+
+.sliderContainer,
+.tileContainer {
+  height: 100%;
+}
+
+.sliderTitleContainer {
+  position: relative;
+  cursor: default;
+}
+
+.sliderContentContainer {
+  padding-left: 4rem;
+  width: auto;
+}
+
+.sliderTitle {
+  position: absolute;
+  height: 30rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  left: 0.5rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
 }
