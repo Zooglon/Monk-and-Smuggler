@@ -246,11 +246,17 @@ button {
 .slider {
   height: 100vh;
   flex-grow: 1;
+  color: var(--cream);
+}
+
+.invert {
+  color: black;
 }
 
 .expanded {
   z-index: 9;
   animation: expand 1s forwards ease-in;
+  max-width: 80vw;
 }
 
 @keyframes expand {
@@ -267,6 +273,10 @@ button {
   height: 100%;
 }
 
+.tileContainer {
+  padding: 2rem 4rem 2rem 2rem;
+}
+
 .sliderTitleContainer {
   position: relative;
   cursor: default;
@@ -275,6 +285,8 @@ button {
 .sliderContentContainer {
   padding-left: 4rem;
   width: auto;
+  max-height: 100%;
+  overflow: scroll;
 }
 
 .sliderTitle {

@@ -1,1 +1,1 @@
-export const Subtitle = (content: string) => <h4>{content}</h4>;
+export const Subtitle = ({ children }: { children: string }) => <h3>{children}</h3>;

@@ -82,7 +82,7 @@ const App = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) 
         </div>
         <div
           id="opening"
-          className="slider"
+          className="slider invert"
           onClick={(e) => expand(e, activeSlider, setActiveSlider, navigate)}
           style={{ backgroundColor: "var(--cream)" }}>
           <aside className="sliderTitleContainer">

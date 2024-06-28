@@ -1,1 +1,1 @@
-export const Title = (content: string) => <h1>{content}</h1>;
+export const Title = ({ children }: { children: string }) => <h1>{children}</h1>;
