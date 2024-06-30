@@ -28,7 +28,7 @@ const RenderPage = ({ page, mobile }: { page?: string | undefined; mobile?: bool
       pageSelect = <LandingPage mobile={mobile ?? false} />;
   }
 
-  return <section className="sliderContentContainer">{pageSelect}</section>;
+  return mobile ? pageSelect : <section className="sliderContentContainer">{pageSelect}</section>;
 };
 
 const expand = (
@@ -62,8 +62,6 @@ const MobilePage = ({ page }: { page?: string | undefined }) => (
 const App = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) => {
   const [activeSlider, setActiveSlider] = useState("home");
   const navigate = useNavigate();
-
-  console.log("Mobile", mobile);
 
   return mobile ? (
     <MobilePage page={page} />

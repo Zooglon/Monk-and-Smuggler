@@ -92,6 +92,10 @@ button {
   height: 100%;
 }
 
+.siteContainer {
+  height: 100%;
+}
+
 .pageContainer {
   display: flex;
   align-items: center;
@@ -99,9 +103,18 @@ button {
   height: 100%;
 }
 
-.logoContainer {
-  position: relative;
-  width: 55%;
+@media screen and (max-width: 700px) {
+  .pageContainer {
+    padding: 30% 10% 10%;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .logoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .metaContainer {
@@ -214,7 +227,7 @@ button {
   left: 30%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   .ms_Btn {
     display: none;
   }
@@ -232,6 +245,10 @@ button {
   background-color: white;
   width: 100%;
   height: 10%;
+}
+
+.ms_nav--Btn::after {
+  background-color: red;
 }
 
 .closedNav {
@@ -284,6 +301,12 @@ button {
   width: auto;
   max-height: 100%;
   overflow: scroll;
+}
+
+@media screen and (max-width: 700px) {
+  .sliderContentContainer {
+    padding-left: unset;
+  }
 }
 
 .sliderTitle {

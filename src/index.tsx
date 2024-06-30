@@ -8,29 +8,29 @@ import ErrorPage from "./errorPage";
 const size =
   window.screen.height < window.screen.width ? window.screen.height : window.screen.width;
 
-console.log("size", size);
+const mobile = size >= 600 ? false : true;
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: size >= 600 ? <App page="home" /> : <App page="home" mobile />,
+    element: <App page="home" mobile={mobile} />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/home",
-    element: size >= 600 ? <App page="home" /> : <App page="home" mobile />,
+    element: <App page="home" mobile={mobile} />,
   },
   {
     path: "/openinghours",
-    element: size >= 600 ? <App page="openinghours" /> : <App page="openinghours" mobile />,
+    element: <App page="openinghours" mobile={mobile} />,
   },
   {
     path: "/manifesto",
-    element: size >= 600 ? <App page="manifesto" /> : <App page="manifesto" mobile />,
+    element: <App page="manifesto" mobile={mobile} />,
   },
   {
     path: "/contact",
-    element: size >= 600 ? <App page="contact" /> : <App page="contact" mobile />,
+    element: <App page="contact" mobile={mobile} />,
   },
 ]);
 

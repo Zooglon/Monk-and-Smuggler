@@ -35,7 +35,7 @@ export const MobileNav = () => {
             <li className="ms_nav--menu-item">
               <a href="/manifesto" onClick={() => setShowNav(false)}>
                 <span className="ms_nav--bean"></span>
-                <p>OUR STORY</p>
+                <p>MANIFESTO</p>
               </a>
             </li>
             <li className="ms_nav--menu-item">
