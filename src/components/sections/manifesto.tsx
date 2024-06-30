@@ -1,7 +1,11 @@
 import { Subtitle, Title } from "../tools";
 
-export const Manifesto = () => {
-  return (
+const MobilePage = () => <>Mobile page</>;
+
+export const Manifesto = ({ mobile }: { mobile?: boolean }) => {
+  return mobile ? (
+    <MobilePage />
+  ) : (
     <div className="tileContainer flex col gap-l" style={{ backgroundColor: "var(--orange)" }}>
       <Title>OUR MANIFESTO</Title>
       <div>

@@ -6,7 +6,7 @@ export const MobileNav = () => {
   return (
     <nav id="ms_mobile_nav" className="ms_nav flex col">
       {showNav ? (
-        <>
+        <div className="ms_nav_container">
           <div className="flex row between p-3">
             <aside className="ms_nav--aside">
               <p style={{ animationDelay: "0.5s" }}>Hello Stafford.</p>
@@ -45,7 +45,7 @@ export const MobileNav = () => {
               </a>
             </li>
           </ul>
-        </>
+        </div>
       ) : (
         <button
           onClick={() => setShowNav(true)}

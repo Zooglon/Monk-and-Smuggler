@@ -1,7 +1,11 @@
 import { Paragraph, Subtitle, Title } from "../tools";
 
-export const Contact = () => {
-  return (
+const MobilePage = () => <>Mobile page</>;
+
+export const Contact = ({ mobile }: { mobile?: boolean }) => {
+  return mobile ? (
+    <MobilePage />
+  ) : (
     <div className="tileContainer flex col gap-l" style={{ backgroundColor: "var(--brown)" }}>
       <Title>CONTACT US</Title>
       <Title>We are a super friendly bunch so please pop in anytime</Title>
