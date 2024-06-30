@@ -15,6 +15,8 @@ const ErrorPage: React.FC = () => {
     errorMessage = "Unknown error";
   }
 
+  console.log(errorMessage);
+
   return (
     <div id="error-page" className="flex col gap-m center align-center m-auto p-4">
       <h1>Oh my, We can't make one of those...</h1>
