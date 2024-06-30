@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import "./App.css";
 import { MobileNav } from "./components";
 import { Contact, LandingPage, Manifesto, OpeningHours } from "./components/sections";
@@ -58,11 +58,15 @@ const MobilePage = ({ page }: { page?: string | undefined }) => (
   </div>
 );
 
-const App = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) => {
-  const [activeSlider, setActiveSlider] = useState("home");
+const App = ({ page, mobile }: { page: string; mobile?: boolean }) => {
+  const [activeSlider, setActiveSlider] = useState(page);
   const navigate = useNavigate();
 
-  console.log("Check", page, mobile);
+  useEffect(() => {
+    if (document.getElementById(`${page}`)) {
+      document.getElementById(`${page}`)?.classList.add("expanded");
+    }
+  }, [page]);
 
   return mobile ? (
     <MobilePage page={page} />
@@ -71,7 +75,7 @@ const App = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) 
       <div className="container flex row">
         <div
           id="home"
-          className="slider expanded"
+          className="slider"
           onClick={(e) => expand(e, activeSlider, setActiveSlider, navigate)}
           style={{ backgroundColor: "var(--green)" }}>
           <aside className="sliderTitleContainer">
