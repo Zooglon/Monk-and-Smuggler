@@ -18,10 +18,9 @@ const comments = [
 ];
 
 const mobilePage = (
-  <div className="pageContainer" style={{ backgroundColor: "var(--brown)" }}>
-    <div className="logoOverlay"></div>
+  <div className="pageContainer" style={{ backgroundColor: "black" }}>
     <div className="logoContainer">
-      <Logo />
+      <Logo type="png" />
     </div>
     <div id="os_main" className="metaContainer">
       <h1>Monk & Smuggler</h1>
