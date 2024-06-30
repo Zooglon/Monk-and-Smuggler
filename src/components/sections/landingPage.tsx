@@ -15,6 +15,7 @@ const comments = [
   "The coffee is so good",
   "Oh Wow!!!",
   "I can't believe this is plant based!",
+  "THANK YOU! Been looking for somewhere new and lovely like your coffee shop",
 ];
 
 const mobilePage = (
@@ -67,7 +68,6 @@ const mobilePage = (
 
 const fullPage = (
   <div className="tileContainer flex col center" style={{ backgroundColor: "var(--green)" }}>
-    {/* <Logo /> */}
     <Subtitle>Hello</Subtitle>
     <Title>We are Monk & Smuggler</Title>
     <Subtitle>Passion for Coffee</Subtitle>
@@ -80,21 +80,27 @@ const fullPage = (
       producers that share our love of people and the environment.
     </Paragraph>
     <Subtitle>FAQ's:</Subtitle>
-    <Paragraph>
+    <div>
       <h5>I don't drink coffee, should I bother coming?</h5>
-      We get it, coffee isn't for everyone. Thats why we have an amazing selection of other drinks
-      from teas and hot chocolate to cold cans and Kombuchas.
-    </Paragraph>
-    <Paragraph>
+      <Paragraph>
+        We get it, coffee isn't for everyone. Thats why we have an amazing selection of other drinks
+        from teas and hot chocolate to cold cans and Kombuchas.
+      </Paragraph>
+    </div>
+    <div>
       <h5>Do you cater to allergies/dietary requirements?</h5>
-      Yeah we do! All our snacks are clearly labeled with allergen and dietary info. Our team are on
-      hand for any specific needs
-    </Paragraph>
-    <Paragraph>
+      <Paragraph>
+        Yeah we do! All our snacks are clearly labeled with allergen and dietary info. Our team are
+        on hand for any specific needs
+      </Paragraph>
+      <div></div>
       <h5>Do you carry any Vegan options?</h5>
-      Do we ever! Plant based options are our favourite and labelled up to help you choose. We carry
-      Oat and Soya milk and the vast majority of out canned and bottled drinks are also plant based.
-    </Paragraph>
+      <Paragraph>
+        Do we ever! Plant based options are our favourite and labelled up to help you choose. We
+        carry Oat and Soya milk and the vast majority of out canned and bottled drinks are also
+        plant based.
+      </Paragraph>
+    </div>
   </div>
 );
 
