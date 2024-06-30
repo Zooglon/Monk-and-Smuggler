@@ -38,14 +38,13 @@ const expand = (
   navigate: NavigateFunction
 ) => {
   let elem = e.target as HTMLElement;
-  if (elem.id !== activeSlider) {
+  if (elem.classList.contains("slider") || elem.classList.contains("sliderTitle")) {
     document.querySelector(".expanded") &&
       document.querySelector(".expanded")?.classList.remove("expanded");
 
     if (elem.tagName === "SPAN") {
       elem = elem.parentElement?.parentElement ?? elem;
     }
-    console.log(elem);
     setActiveSlider(elem.id);
     elem.classList.add("expanded");
     navigate(`/${elem.id}`);
