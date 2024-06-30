@@ -1,6 +1,6 @@
 import { Manifesto } from "./manifesto";
 import { Contact } from "./contact";
 import { LandingPage } from "./landingPage";
-import { OpeningTimes } from "./openingTImes";
+import { OpeningHours } from "./openingHours";
 
-export { Manifesto, Contact, LandingPage, OpeningTimes };
+export { Manifesto, Contact, LandingPage, OpeningHours };

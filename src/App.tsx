@@ -1,31 +1,31 @@
 import { MouseEvent, useState } from "react";
 import "./App.css";
 import { MobileNav } from "./components";
-import { Contact, LandingPage, Manifesto, OpeningTimes } from "./components/sections";
+import { Contact, LandingPage, Manifesto, OpeningHours } from "./components/sections";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 
-const RenderPage = ({ page }: { page?: string | undefined }) => {
+const RenderPage = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) => {
   let pageSelect;
   switch (page) {
     case "":
     case "home":
-      pageSelect = <LandingPage mobile={false} />;
+      pageSelect = <LandingPage mobile={mobile ?? false} />;
       break;
 
-    case "opening":
-      pageSelect = <OpeningTimes />;
+    case "openinghours":
+      pageSelect = <OpeningHours mobile={mobile ?? false} />;
       break;
 
     case "manifesto":
-      pageSelect = <Manifesto />;
+      pageSelect = <Manifesto mobile={mobile ?? false} />;
       break;
 
     case "contact":
-      pageSelect = <Contact />;
+      pageSelect = <Contact mobile={mobile ?? false} />;
       break;
 
     default:
-      pageSelect = <LandingPage mobile={false} />;
+      pageSelect = <LandingPage mobile={mobile ?? false} />;
   }
 
   return <section className="sliderContentContainer">{pageSelect}</section>;
@@ -52,10 +52,10 @@ const expand = (
   }
 };
 
-const MobilePage = () => (
+const MobilePage = ({ page }: { page?: string | undefined }) => (
   <div className="siteContainer flex col">
     <MobileNav />
-    <LandingPage mobile={true} />
+    <RenderPage page={page} mobile />
   </div>
 );
 
@@ -63,10 +63,10 @@ const App = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) 
   const [activeSlider, setActiveSlider] = useState("home");
   const navigate = useNavigate();
 
-  console.log("Page", page);
+  console.log("Mobile", mobile);
 
   return mobile ? (
-    <MobilePage />
+    <MobilePage page={page} />
   ) : (
     <div className="siteContainer flex col">
       <div className="container flex row">
@@ -81,14 +81,14 @@ const App = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) 
           {activeSlider === "home" && <RenderPage page="home" />}
         </div>
         <div
-          id="opening"
+          id="openinghours"
           className="slider invert"
           onClick={(e) => expand(e, activeSlider, setActiveSlider, navigate)}
           style={{ backgroundColor: "var(--cream)" }}>
           <aside className="sliderTitleContainer">
             <span className="sliderTitle">OPENING HOURS</span>
           </aside>
-          {activeSlider === "opening" && <RenderPage page="opening" />}
+          {activeSlider === "openinghours" && <RenderPage page="openinghours" />}
         </div>
         <div
           id="manifesto"

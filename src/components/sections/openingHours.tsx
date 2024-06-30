@@ -1,7 +1,11 @@
-import { Paragraph, Subtitle, Title } from "../tools";
+import { Subtitle, Title } from "../tools";
 
-export const OpeningTimes = () => {
-  return (
+const MobilePage = () => <>Mobile page</>;
+
+export const OpeningHours = ({ mobile }: { mobile?: boolean }) => {
+  return mobile ? (
+    <MobilePage />
+  ) : (
     <div className="tileContainer flex col gap-l" style={{ backgroundColor: "var(--cream)" }}>
       <Title>OPENING TIMES:</Title>
       <div>
