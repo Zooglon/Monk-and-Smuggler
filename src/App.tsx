@@ -62,6 +62,8 @@ const App = ({ page, mobile }: { page?: string | undefined; mobile?: boolean }) 
   const [activeSlider, setActiveSlider] = useState("home");
   const navigate = useNavigate();
 
+  console.log("Check", page, mobile);
+
   return mobile ? (
     <MobilePage page={page} />
   ) : (
