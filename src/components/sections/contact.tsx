@@ -1,4 +1,4 @@
-import { Paragraph, Subtitle, Title } from "../tools";
+import { Paragraph, Subtitle, Title, WindowImg } from "../tools";
 
 const MobilePage = () => (
   <div className="pageContainer" style={{ backgroundColor: "var(--brown)", color: "var(--cream)" }}>
@@ -26,6 +26,7 @@ export const Contact = ({ mobile }: { mobile?: boolean }) => {
     <MobilePage />
   ) : (
     <div className="tileContainer flex col gap-l" style={{ backgroundColor: "var(--brown)" }}>
+      <WindowImg />
       <Title>CONTACT US</Title>
       <Title>We are a super friendly bunch so please pop in anytime</Title>
       <Subtitle>Got a question?</Subtitle>

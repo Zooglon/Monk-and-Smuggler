@@ -1,4 +1,4 @@
-import { Subtitle, Title } from "../tools";
+import { Subtitle, Title, WindowImg } from "../tools";
 
 const MobilePage = () => (
   <div className="pageContainer" style={{ backgroundColor: "var(--cream)" }}>
@@ -20,6 +20,7 @@ export const OpeningHours = ({ mobile }: { mobile?: boolean }) => {
     <MobilePage />
   ) : (
     <div className="tileContainer flex col gap-l" style={{ backgroundColor: "var(--cream)" }}>
+      <WindowImg inverted />
       <Title>OPENING HOURS:</Title>
       <div>
         <Subtitle>Monday: 8am - 4pm</Subtitle>

@@ -1,4 +1,5 @@
-import { Logo, Paragraph, Subtitle, Title } from "../tools";
+import { Logo, Paragraph, Subtitle, Title, WindowImg } from "../tools";
+import img from "../../images/ms_window_outline.png";
 
 const comments = [
   "Feel like i'm on holiday",
@@ -68,6 +69,7 @@ const mobilePage = (
 
 const fullPage = (
   <div className="tileContainer flex col center" style={{ backgroundColor: "var(--green)" }}>
+    <WindowImg />
     <Subtitle>Hello</Subtitle>
     <Title>We are Monk & Smuggler</Title>
     <Subtitle>Passion for Coffee</Subtitle>

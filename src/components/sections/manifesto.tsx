@@ -1,4 +1,4 @@
-import { Subtitle, Title } from "../tools";
+import { Subtitle, Title, WindowImg } from "../tools";
 
 const MobilePage = () => (
   <div className="pageContainer" style={{ backgroundColor: "var(--orange)" }}>
@@ -21,6 +21,7 @@ export const Manifesto = ({ mobile }: { mobile?: boolean }) => {
     <MobilePage />
   ) : (
     <div className="tileContainer flex col gap-l" style={{ backgroundColor: "var(--orange)" }}>
+      <WindowImg />
       <Title>OUR MANIFESTO</Title>
       <div>
         <Subtitle>We exist to bring good coffee to Stafford.</Subtitle>
