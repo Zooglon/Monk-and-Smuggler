@@ -38,12 +38,14 @@ const expand = (
   navigate: NavigateFunction
 ) => {
   let elem = e.target as HTMLElement;
-  if (elem.classList.contains("slider") || elem.classList.contains("sliderTitle")) {
+  if (elem.classList.contains("slider") || elem.classList.contains("sliderTileOverlay")) {
     document.querySelector(".expanded") &&
       document.querySelector(".expanded")?.classList.remove("expanded");
-
-    if (elem.tagName === "SPAN") {
-      elem = elem.parentElement?.parentElement ?? elem;
+    // if (elem.tagName === "SPAN") {
+    //   elem = elem.parentElement?.parentElement ?? elem;
+    // }
+    if (elem.classList.contains("sliderTileOverlay")) {
+      elem = elem.parentElement ?? elem;
     }
     setActiveSlider(elem.id);
     elem.classList.add("expanded");
@@ -78,6 +80,7 @@ const App = ({ page, mobile }: { page: string; mobile?: boolean }) => {
           className="slider"
           onClick={(e) => expand(e, activeSlider, setActiveSlider, navigate)}
           style={{ backgroundColor: "var(--green)" }}>
+          <div className="sliderTileOverlay"></div>
           <aside className="sliderTitleContainer">
             <span className="sliderTitle">MONK & SMUGGLER</span>
           </aside>
@@ -88,6 +91,7 @@ const App = ({ page, mobile }: { page: string; mobile?: boolean }) => {
           className="slider invert"
           onClick={(e) => expand(e, activeSlider, setActiveSlider, navigate)}
           style={{ backgroundColor: "var(--cream)" }}>
+          <div className="sliderTileOverlay"></div>
           <aside className="sliderTitleContainer">
             <span className="sliderTitle">OPENING HOURS</span>
           </aside>
@@ -98,6 +102,7 @@ const App = ({ page, mobile }: { page: string; mobile?: boolean }) => {
           className="slider"
           onClick={(e) => expand(e, activeSlider, setActiveSlider, navigate)}
           style={{ backgroundColor: "var(--orange)" }}>
+          <div className="sliderTileOverlay"></div>
           <aside className="sliderTitleContainer">
             <span className="sliderTitle">MANIFESTO</span>
           </aside>
@@ -108,6 +113,7 @@ const App = ({ page, mobile }: { page: string; mobile?: boolean }) => {
           className="slider"
           onClick={(e) => expand(e, activeSlider, setActiveSlider, navigate)}
           style={{ backgroundColor: "var(--brown)" }}>
+          <div className="sliderTileOverlay"></div>
           <aside className="sliderTitleContainer">
             <span className="sliderTitle">SAY HI</span>
           </aside>
