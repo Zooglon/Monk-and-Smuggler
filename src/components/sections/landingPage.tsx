@@ -93,7 +93,8 @@ const fullPage = (
         Yeah we do! All our snacks are clearly labeled with allergen and dietary info. Our team are
         on hand for any specific needs
       </Paragraph>
-      <div></div>
+    </div>
+    <div>
       <h5>Do you carry any Vegan options?</h5>
       <Paragraph>
         Do we ever! Plant based options are our favourite and labelled up to help you choose. We
