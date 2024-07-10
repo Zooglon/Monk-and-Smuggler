@@ -59,7 +59,7 @@ const mobilePage = (
         <h5>Do you carry any Vegan options?</h5>
         <Paragraph>
           Do we ever! Plant based options are our favourite and labelled up to help you choose. We
-          carry Oat and Soya milk and the vast majority of out canned and bottled drinks are also
+          carry Oat and Soya milk and the vast majority of our canned and bottled drinks are also
           plant based.
         </Paragraph>
       </div>
@@ -100,7 +100,7 @@ const fullPage = (
       <h5>Do you carry any Vegan options?</h5>
       <Paragraph>
         Do we ever! Plant based options are our favourite and labelled up to help you choose. We
-        carry Oat and Soya milk and the vast majority of out canned and bottled drinks are also
+        carry Oat and Soya milk and the vast majority of our canned and bottled drinks are also
         plant based.
       </Paragraph>
     </div>
